@@ -8,5 +8,5 @@ setup(name='children-linguistic-alignment',
       author='Thomas MISIEK',
       author_email='thomas.misiek@gmail.com',
       url='',
-      packages=[],
+      packages=[chilingalign],
      )
