@@ -67,7 +67,7 @@ def process_similarities(directory, language, age_min, age_max, test):
     print("\nCreating the initial directories architecture")
     create_architecture(directory)
 
-    print("\nRetrieving raw data from Childes")
+    print("\nRetrieving raw data from CHILDES")
     retrieve_childes_data(directory, language, age_min, age_max, test)
 
     print("\nCharging the stop-words")
@@ -77,7 +77,7 @@ def process_similarities(directory, language, age_min, age_max, test):
         print("\nCreating the vocabulary")
         create_vocabulary(directory, [1,3,10,20,50])
     print("\nCharging the vocabulary")
-    vocabulary = get_vocab(language)
+    vocabulary = get_vocab(directory)
 
     print("\nCharging the spacy model ")
     nlp = spacy.load(settings.dic_spacy[language])
@@ -267,13 +267,13 @@ def charge_age(directory, language, age, delay = 100, trial_nbr = 5, failure_nbr
 
 # charge and return the age of acquisition dictionnaries of children, considering
 # different thresholds
-def get_vocab(language):
+def get_vocab(directory):
 
-    vocabularygloss1 = pickle.load( open("../Databases/"+language+"/vocabulary/1.p", "rb" ) )
-    vocabularygloss3 = pickle.load( open("../Databases/"+language+"/vocabulary/3.p", "rb" ) )
-    vocabularygloss10 = pickle.load( open("../Databases/"+language+"/vocabulary/10.p", "rb" ) )
-    vocabularygloss20 = pickle.load( open("../Databases/"+language+"/vocabulary/20.p", "rb" ) )
-    vocabularygloss50 = pickle.load( open("../Databases/"+language+"/vocabulary/50.p", "rb" ) )
+    vocabularygloss1 = pickle.load( open("../Databases/"+directory+"/vocabulary/1.p", "rb" ) )
+    vocabularygloss3 = pickle.load( open("../Databases/"+directory+"/vocabulary/3.p", "rb" ) )
+    vocabularygloss10 = pickle.load( open("../Databases/"+directory+"/vocabulary/10.p", "rb" ) )
+    vocabularygloss20 = pickle.load( open("../Databases/"+directory+"/vocabulary/20.p", "rb" ) )
+    vocabularygloss50 = pickle.load( open("../Databases/"+directory+"/vocabulary/50.p", "rb" ) )
 
     return [vocabularygloss1, vocabularygloss3, vocabularygloss10, vocabularygloss20, vocabularygloss50]
 
