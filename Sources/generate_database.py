@@ -19,7 +19,7 @@ from gensim.models import KeyedVectors
 import settings
 
 
-def process_similarities(directory, language, age_min, age_max, test):
+def process_similarities(directory, language, age_min, age_max, test = False):
 
     """
         Retrieve raw data from the CHILDES database, pre-process it and compute
