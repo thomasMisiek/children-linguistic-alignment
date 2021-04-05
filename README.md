@@ -6,11 +6,7 @@ of consecutive utterances retrieved from the CHILDES database, as well as severa
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install children-linguistic-alignment.
-
-```bash
-pip install git+https://github.com/thomasMisiek/children-linguistic-alignment
-```
+Install the project by cloning it on your computer or by downloading a compressed version
 
 ## Usage
 
