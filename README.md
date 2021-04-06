@@ -275,12 +275,14 @@ Number of words in adult_final_tokens
 #### lexical_unigrams_nbr:
 
 Number of lexical unigrams found both in parent and child utterance (specifically child_tokens and adult_tokens).
+</br>
 In other words: number of words that are identical in both child and parent utterances.
 </br></br>
 
 #### lexical_bigrams_nbr:
 
 Number of lexical bigrams found both in parent and child utterance (specifically child_tokens and adult_tokens).
+</br>
 In other words: number of pairs of strictly consecutive words that are identical in both child and parent utterances.
 </br></br>
 
@@ -292,12 +294,14 @@ Number of lexical trigrams found both in parent and child utterance (specificall
 #### syntax_unigrams_nbr:
 
 Number of syntactic unigrams found both in parent and child utterance (specifically child_pos and adult_pos).
+</br>
 In other words: number of grammatical functions that are identical in both child and parent utterances.
 </br></br>
 
 #### syntax_bigrams_nbr:
 
 Number of syntactic bigrams found both in parent and child utterance (specifically child_pos and adult_pos).
+</br>
 In other words: number of pairs of stricly consecutive grammatical functions that are identical in both child and parent utterances.
 </br></br>
 
@@ -307,3 +311,20 @@ Number of syntactic trigrams found both in parent and child utterance (specifica
 </br></br>
 
 #### syntax_minus_lexic_bigrams_nbr:
+
+Number of syntactic bigrams that are not at the same time lexical bigrams.
+In other words: number of pairs of consecutive words that are of the same grammatical function in the child and in the adult utterances, but which are not exactly, lexically similar.
+</br></br>
+
+
+
+
+
+
+
+#### syntax_minus_lexic_trigrams_nbr:
+
+Number of syntactic trigrams that are not at the same time lexical trigrams.
+</br></br>
+
+#### out_of_child_vocab_nbr_1
