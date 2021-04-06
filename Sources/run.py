@@ -22,5 +22,5 @@ if int(sys.argv[4]) > 80:
 if len(sys.argv) > 5 and (sys.argv[5] != "True" and sys.argv[5] != "False"):
     print("test should be either True or False")
 
-
-process_similarities(sys.argv[1], sys.argv[2], age_min = int(sys.argv[3]), age_max = int(sys.argv[4]), test = bool(sys.argv[5]))
+test = sys.argv[5] == "True"
+process_similarities(sys.argv[1], sys.argv[2], age_min = int(sys.argv[3]), age_max = int(sys.argv[4]), test = test)
