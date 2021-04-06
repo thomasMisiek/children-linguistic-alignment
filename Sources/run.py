@@ -11,11 +11,11 @@ if sys.argv[2] not in ["English", "French", "Spanish", "German", "Chinese", "Jap
 
 if int(sys.argv[3]) < 10:
     sys.exit("Too low min_age: min:10")
-if int(sys.argv[4]) < 11:
-    sys.exit("Too low max_age: min:11")
+if int(sys.argv[4]) < 10:
+    sys.exit("Too low max_age: min:10")
 
-if int(sys.argv[3]) > 79:
-    sys.exit("Too high min_age: max:79")
+if int(sys.argv[3]) > 80:
+    sys.exit("Too high min_age: max:80")
 if int(sys.argv[4]) > 80:
     sys.exit("Too high max_age: max:80")
 

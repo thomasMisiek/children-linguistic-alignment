@@ -30,9 +30,9 @@ def process_similarities(directory, language, age_min, age_max, test = False):
         :type directory: str
         :param language: The language from which CHILDES transcripts will be selected
         :type directory: str
-        :param age_min: The minimum target childs age at which utterances will be retrieved
+        :param age_min: The minimum target childs age at which utterances will be retrieved (included)
         :type age_min: int
-        :param age_max: The maximum target childs age at which utterances will be retrieved
+        :param age_max: The maximum target childs age at which utterances will be retrieved (included)
         :type age_max: int
         :param test: If True, only a small amount of utterances will be selected for each age,
         in order to accelerate processing. It is a development oriented parameter

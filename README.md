@@ -20,8 +20,8 @@ For example: python run.py French_20_25 French 20 25 True
 <ul>
 <li>with French_20_25 being the name of the directory where the results will be stored (can be any name). Mandatory</li>
 <li>with French being the language used to retrieve data from CHILDES (can be either of the 6 mentionned earlier). Mandatory</li>
-<li>with 20 being the minimal age to be considered (min:10, max:79). Mandatory</li>
-<li>with 25 being the maximal age to be considered (min:11, max:80). Mandatory</li>
+<li>with 20 being the minimal age to be considered (min:10, max:80, included). Mandatory</li>
+<li>with 25 being the maximal age to be considered (min:10, max:80, included). Mandatory</li>
 <li>and True stating if the program is in test mode or not. Optional, default value: False</li>
 </ul>
 
