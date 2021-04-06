@@ -96,3 +96,24 @@ Name of the corpus from which the child utterance was retrieved
 #### adult_corpus_name
 
 Name of the corpus from which the adult utterance was retrieved
+
+#### semantic_similarity
+
+Float comprised between 0 and 1. The closer it is to 1, the higher the semantic similarity between the child and adult utterances.
+</br>
+It it computed by first tokenising both utterances using a Spacy model, specific to the language selected.
+</br>
+Tokens unknown to the Spacy models are removed from the utterances, function words (specified by Spacy) are removed too.
+</br>
+Each of the remaining tokens are transformed into a 300 dimension embedding using word2vec, then each of these embeddings are
+summed to create one representation of the whole sentence.
+</br>
+The two resulting 300 dimension vectors representing the child and the adult utterances are used to compute the cosine similarity, which is our proxy for the semantic similarity.
+
+#### editdistance
+
+Int that represent the Levenshtein distance between child and parent utterancse.
+</br>
+The Levenshtein distance is the number of deletions, insertions, or substitutions that are required to transform one string (the source) into another (the target).
+</br>
+Here the atomic level is the word (or the token), not the character.
