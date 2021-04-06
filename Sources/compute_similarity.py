@@ -78,13 +78,12 @@ def get_data(row1, row2, vocabulary_gloss, model, fw, precondition):
 
     lev_dist = nltk.edit_distance(utt1.tokens_gloss, utt2.tokens_gloss)
 
-    # from child_age to parent_sex is only relevant for the normal condition
     res = {
 
           "condition": condition,
-          "child_age": row1.target_child_age,
-          "child_sex": row1.target_child_sex,
-          "child_id": row1.target_child_id,
+          "child_age": child_row.target_child_age,
+          "child_sex": child_row.target_child_sex,
+          "child_id": child_row.target_child_id,
           "parent_sex": parent_sex(adult_row),
           "child_utterance_order": child_row.utterance_order,
           "adult_utterance_order": adult_row.utterance_order,

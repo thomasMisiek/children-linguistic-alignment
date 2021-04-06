@@ -46,4 +46,23 @@ Here is an exhaustive list of the columns of the CSV file, what is contained in 
 </br>
 "par->chi" if the parent speak first then the child, and both utterances are strictly consecutive.
 </br>
-In "rand_in" and "rand_ex", the direction of speech make non sense, as utterances are almost never consecutive
+In "rand_in" and "rand_ex", the direction of speech make no sense, as utterances are almost never consecutive
+</br>
+Only single utterances are considered, groups of consecutive, uninterrupted utterances by the same speaker are not clustered,
+so in all conditions, only the last and first utterance of a cluster might be taken into account.
+</br>
+In all conditions, both a parent and a child sentence are selected.
+
+#### child_age
+
+The age of the target child in the transcript, only relevant for "chi->par", "par->chi" and "rand_in".
+</br>
+In "rand_ex" this is the age of the target child from the transcript from which the child utterance was retrieved. In this condition, the adult might have been speaking to a child of a different age.
+
+#### child_sex
+
+The sex of the target child in the transcript, once again, only relevant for "chi->par", "par->chi" and "rand_in", for the same reason as for child_age.
+
+#### child_id
+
+The id of the target child in the transcript, once again, only relevant for "chi->par", "par->chi" and "rand_in", for the same reason as for child_age.
