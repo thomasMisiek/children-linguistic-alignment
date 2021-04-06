@@ -254,8 +254,8 @@ def get_condition(row1, row2, precondition):
         :type precondition: str
 
         :returns: "chi->par" if the child speak first then the parent,
-        "par->chi" if the parent speaker first then the child, "rand_in" or "rand_ex" otherwise,
-        as in these last two condition, the direction of speech make non sense, as utterances are non consecutives
+        "par->chi" if the parent speak first then the child, "rand_in" or "rand_ex" otherwise,
+        as in these last two condition, the direction of speech make non sense, as utterances are non consecutive
         :rtype: str
     """
     if precondition == "normal":
