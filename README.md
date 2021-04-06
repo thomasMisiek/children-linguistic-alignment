@@ -37,5 +37,7 @@ To each treated age correspond a CSV file containing similarity measurements and
 Here is an exhaustive list of the columns of the CSV file, what is contained in them, and how it is processed.
 
 <ul>
-<li><b>type:</b> This column</li>
+<li><b>type:</b> The "chi->par" if the child speak first then the parent,
+    "par->chi" if the parent speaker first then the child, "rand_in" or "rand_ex" otherwise,
+    as in these last two condition, the direction of speech make non sense, as utterances are non consecutives</li>
 </ul>

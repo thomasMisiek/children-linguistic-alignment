@@ -5,7 +5,7 @@ from utterance import Utterance
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def get_data(row1, row2, vocabulary_gloss, model, fw, condition):
+def get_data(row1, row2, vocabulary_gloss, model, fw, precondition):
 
     """
         Pre-process data, creates embedding, part of speech, etc... of row1 and row2,
@@ -26,10 +26,10 @@ def get_data(row1, row2, vocabulary_gloss, model, fw, condition):
         :type model: spacy.lang.en.English (or other languages)
         :param fw: The list of function words of the specified language, retrieved from Spacy
         :type fw: set
-        :param condition: Can have three values: "normal", "rand_in" and "rand_ex",
+        :param precondition: Can have three values: "normal", "rand_in" and "rand_ex",
         define if row1 and row2 are respectively strictly consecutives, or at least in the same transcript,
         or finally chosen at random in the whole CHILDES corpus
-        :type condition: str
+        :type precondition: str
 
         :returns: A dictionnary containing all the linguistic similarities measures and relevant
         informations about the couple of utterance represented by row1 and row2
@@ -44,7 +44,7 @@ def get_data(row1, row2, vocabulary_gloss, model, fw, condition):
     utt1.expand(model, fw)
     utt2.expand(model, fw)
 
-    conv_direction = direction(row1, row2, condition)
+    condition = get_condition(row1, row2, precondition)
 
     if row1.speaker_code in settings.child_cond:
         child_row = row1
@@ -81,7 +81,7 @@ def get_data(row1, row2, vocabulary_gloss, model, fw, condition):
     # from child_age to parent_sex is only relevant for the normal condition
     res = {
 
-          "type": conv_direction,
+          "condition": condition,
           "child_age": row1.target_child_age,
           "child_sex": row1.target_child_sex,
           "child_id": row1.target_child_id,
@@ -237,10 +237,10 @@ def out_of_child_vocab(words, age, vocabulary):
     return nbr_unknown, unknown_words
 
 
-def direction(row1, row2, condition):
+def get_condition(row1, row2, precondition):
     """
-        Specificy the direction of the interaction between a child and his parent,
-        which can be either "child speak first, then adult", "adult speak first then child", or "irrelevant"
+        Specify the condition of the interaction between a child and his parent,
+        which can be of 4 different types (see returns)
 
         :param row1: A row of a pre-processed Dataframe, the row contain all useful
         informations about an utterance
@@ -248,17 +248,17 @@ def direction(row1, row2, condition):
         :param row2: A row of a pre-processed Dataframe, the row contain all
         useful informations about an utterance
         :type row2: pandas.Series
-        :param condition: Can have three values: "normal", "rand_in" and "rand_ex",
+        :param precondition: Can have three values: "normal", "rand_in" and "rand_ex",
         define if row1 and row2 are respectively strictly consecutives, or at least in the same transcript,
         or finally chosen at random in the whole CHILDES corpus
-        :type condition: str
+        :type precondition: str
 
         :returns: "chi->par" if the child speak first then the parent,
         "par->chi" if the parent speaker first then the child, "rand_in" or "rand_ex" otherwise,
         as in these last two condition, the direction of speech make non sense, as utterances are non consecutives
         :rtype: str
     """
-    if condition == "normal":
+    if precondition == "normal":
         if row1.speaker_code in settings.child_cond and row2.speaker_code in settings.adult_cond:
             return "chi->par"
         return "par->chi"
