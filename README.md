@@ -66,3 +66,33 @@ The sex of the target child in the transcript, once again, only relevant for "ch
 #### child_id
 
 The id of the target child in the transcript, once again, only relevant for "chi->par", "par->chi" and "rand_in", for the same reason as for child_age.
+
+#### parent_sex
+
+The sex of the target child in the transcript, once again, only relevant for "chi->par", "par->chi" and "rand_in", for the reversed reason as for child_age. This time the parent sex comes from the transcript from which the parent utterance was retrieved.
+
+#### child_utterance_order
+
+Order of the utterance in its transcript, ie: 0 if it is the first sentences uttered in the transcript, 1 if it is the second...
+</br>
+It might be irrelevant for the "rand_ex" condition as child and adult utterances do not come from the same transcript
+
+#### adult_utterance_order
+
+Same as child_utterance_order, but this time for the parent
+
+#### child_transcript_id
+
+Id of the transcript from which the child utterance was retrieved
+
+#### adult_transcript_id
+
+Id of the transcript from which the adult utterance was retrieved
+
+#### child_corpus_name
+
+Name of the corpus from which the child utterance was retrieved
+
+#### adult_corpus_name
+
+Name of the corpus from which the adult utterance was retrieved
