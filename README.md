@@ -163,6 +163,24 @@ Number of morphemes in the child utterance
 
 Number of morphemes in the adult utterance
 
+#### child_pos
+
+Part of speech of the child. Created using a Spacy model, specific to the language selected by the user.
+It should be the same length as child_tokens
+
+#### adult_pos
+
+Part of speech of the adult. Created using a Spacy model, specific to the language selected by the user.
+It should be the same length as adult_tokens
+
+#### child_pos_nbr
+
+Number of grammatical functions in child_pos
+
+#### adult_pos_nbr
+
+Number of grammatical functions in adult_pos
+
 #### child_unknown_words
 
 List of the unknown words in the child utterance. Unknown words are here, words that are not recognized in the Spacy model,
@@ -216,3 +234,31 @@ Number of words in child_final_tokens
 #### adult_final_tokens_nbr
 
 Number of words in adult_final_tokens
+
+#### lexical_unigrams_nbr
+
+Number of lexical unigrams found both in parent and child utterance (specifically child_tokens and adult_tokens).
+In other words: number of words that are identical in both child and parent utterances.
+
+#### lexical_bigrams_nbr
+
+Number of lexical bigrams found both in parent and child utterance (specifically child_tokens and adult_tokens).
+In other words: number of pairs of strictly consecutive words that are identical in both child and parent utterances.
+
+#### lexical_trigrams_nbr
+
+Number of lexical trigrams found both in parent and child utterance (specifically child_tokens and adult_tokens).
+
+#### syntax_unigrams_nbr
+
+Number of syntactic unigrams found both in parent and child utterance (specifically child_pos and adult_pos).
+In other words: number of grammatical functions that are identical in both child and parent utterances.
+
+#### syntax_bigrams_nbr
+
+Number of syntactic bigrams found both in parent and child utterance (specifically child_pos and adult_pos).
+In other words: number of pairs of stricly consecutive grammatical functions that are identical in both child and parent utterances.
+
+#### syntax_trigrams_nbr
+
+Number of syntactic trigrams found both in parent and child utterance (specifically child_pos and adult_pos).

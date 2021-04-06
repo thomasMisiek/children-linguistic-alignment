@@ -107,6 +107,12 @@ def get_data(row1, row2, vocabulary_gloss, model, fw, precondition):
           "child_num_morphemes": child_row.num_morphemes,
           "adult_num_morphemes": adult_row.num_morphemes,
 
+          "child_pos": child_utt.pos_gloss,
+          "adult_pos": adult_utt.pos_gloss,
+
+          "child_pos_nbr": len(child_utt.pos_gloss),
+          "adult_pos_nbr": len(adult_utt.pos_gloss),
+
           "child_unknown_words": str(list(child_utt.gloss_unknowns)),
           "adult_unknown_words": str(list(adult_utt.gloss_unknowns)),
 
