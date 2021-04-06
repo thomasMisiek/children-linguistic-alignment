@@ -36,10 +36,14 @@ After the end of a run, all the results are stored in Databases/your_directory_n
 To each treated age correspond a CSV file containing similarity measurements and other relevant data.
 Here is an exhaustive list of the columns of the CSV file, what is contained in them, and how it is processed.
 
-<ul>
-<li><b>condition:</b> "rand_ex" if both utterances are taken at random in the whole CHILDES dataset (of the same language).
+#### condition
+
+"rand_ex" if both utterances are taken at random in the whole CHILDES dataset (of the same language).
+</br>
 "rand_in" if both utterances are taken at random in the same transcript (conversation).
-"chi->par" if the child speak first then the parent, and both utterances are strictly consecutive,
+</br>
+"chi->par" if the child speak first then the parent, and both utterances are strictly consecutive.
+</br>
 "par->chi" if the parent speak first then the child, and both utterances are strictly consecutive.
-In "rand_in" and "rand_ex", the direction of speech make non sense, as utterances are almost never consecutive</li>
-</ul>
+</br>
+In "rand_in" and "rand_ex", the direction of speech make non sense, as utterances are almost never consecutive
