@@ -98,6 +98,12 @@ def get_data(row1, row2, vocabulary_gloss, model, fw, precondition):
           "child_utt": child_utt.modified_gloss,
           "adult_utt": adult_utt.modified_gloss,
 
+          "child_tokens": str(list(child_utt.tokens_gloss)),
+          "adult_tokens": str(list(adult_utt.tokens_gloss)),
+
+          "child_tokens_nbr": child_utt.length_gloss,
+          "adult_tokens_nbr": adult_utt.length_gloss,
+
           "child_num_morphemes": child_row.num_morphemes,
           "adult_num_morphemes": adult_row.num_morphemes,
 

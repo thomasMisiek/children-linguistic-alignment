@@ -117,3 +117,102 @@ Int that represent the Levenshtein distance between child and parent utterancse.
 The Levenshtein distance is the number of deletions, insertions, or substitutions that are required to transform one string (the source) into another (the target).
 </br>
 Here the atomic level is the word (or the token), not the character.
+
+#### child_utt
+
+A version of the original child utterance where any underscore has been removed.
+</br>
+Here the CHILDES "gloss" version of utterances have been used, as data are generally more complete than for the "stem" version of utterances. "gloss" utterances are the original transcription of the recorded conversations, sometimes even capturing mispronunciations from the speaker. Only the stem of each word has been saved in the "stem" version of utterances, which isn't relevant here.
+</br>
+For more informations, see the CHILDES documentation.
+
+#### adult_utt
+
+A version of the original adult utterance where any underscore has been removed
+
+</br>
+Here the CHILDES "gloss" version of utterances have been used, as data are generally more complete than for the "stem" version of utterances. "gloss" utterances are the original transcription of the recorded conversations, sometimes even capturing mispronunciations from the speaker. Only the stem of each word has been saved in the "stem" version of utterances, which isn't relevant here.
+</br>
+For more informations, see the CHILDES documentation.
+
+#### child_tokens
+
+A tokenized version of the original child utterance, after any underscore has been removed.
+</br>
+Tokenisation done using a Spacy model that is specific to the language selected by the user.
+
+#### adult_tokens
+
+A tokenized version of the original adult utterance, after any underscore has been removed.
+</br>
+Tokenisation done using a Spacy model that is specific to the language selected by the user.
+
+#### child_tokens_nbr
+
+Number of tokens in child_tokens, best estimation of the number of words in the original utterance.
+
+#### adult_tokens_nbr
+
+Number of tokens in adult_tokens, best estimation of the number of words in the original utterance.
+
+#### child_num_morphemes
+
+Number of morphemes in the child utterance
+
+#### adult_num_morphemes
+
+Number of morphemes in the adult utterance
+
+#### child_unknown_words
+
+List of the unknown words in the child utterance. Unknown words are here, words that are not recognized in the Spacy model,
+or words like "xxx", "xxxx", "yyy", "yyyy" that were used in the CHILDES corpus as a way to indicate that the speaker word was
+not recognizable. Duplicates are not deleted.
+
+#### adult_unknown_words
+
+List of the unknown words in the adult utterance. Unknown words are here, words that are not recognized in the Spacy model,
+or words like "xxx", "xxxx", "yyy", "yyyy" that were used in the CHILDES corpus as a way to indicate that the speaker word was
+not recognizable. Duplicates are not deleted.
+
+#### child_unknown_words_nbr
+
+Number of words in child_unknown_words
+
+#### adult_unknown_words_nbr
+
+Number of words in adult_unknown_words
+
+#### child_stopwords
+
+List of the function words (also stop-words) that were found in the child utterance, specifically child_tokens.
+Function words were defined for each language by Spacy.
+
+#### adult_stopwords
+
+List of the function words (also stop-words) that were found in the adult utterance, specifically adult_tokens.
+Function words were defined for each language by Spacy.
+
+#### child_stopwords_nbr
+
+Number of words in child_stopwords
+
+#### adult_stopwords_nbr
+
+Number of words in adult_stopwords
+
+#### child_final_tokens
+
+Tokens present in child_tokens minus tokens in child_stopwords and child_unknown_words
+
+#### adult_final_tokens
+
+Tokens present in adult_tokens minus tokens in adult_stopwords and adult_unknown_words
+
+#### child_final_tokens_nbr
+
+Number of words in child_final_tokens
+
+#### adult_final_tokens_nbr
+
+Number of words in adult_final_tokens
