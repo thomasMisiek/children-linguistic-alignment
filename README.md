@@ -29,3 +29,13 @@ For example: python run.py French_20_25 French 20 25 True
 Please contact thomas.misiek@gmail.com to report any bug or if you want to add something to the code
 
 ## License
+
+## Methods and how to interpret the results
+
+After the end of a run, all the results are stored in Databases/your_directory_name/results.
+To each treated age correspond a CSV file containing similarity measurements and other relevant data.
+Here is an exhaustive list of the columns of the CSV file, what is contained in them, and how it is processed.
+
+<ul>
+<li><b>type:</b> This column</li>
+</ul>
