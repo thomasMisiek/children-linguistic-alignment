@@ -368,4 +368,66 @@ Number of syntactic trigrams that are not at the same time lexical trigrams.
 </br></br>
 
 
-#### out_of_child_vocab_nbr_1
+#### out_of_child_vocab_nbr_1:
+
+Number of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age.
+Here, the age of acquisition (AoA) of a word is computed as the age where children younger than AoA have pronounced 1% of all its occurrences in the whole CHILDES dataset, of a specific language.
+</br></br>
+
+
+#### ooc_vocab_words_1:
+
+List of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age and a 1% threshold. (see out_of_child_vocab_nbr_1)
+</br></br>
+
+
+#### out_of_child_vocab_nbr_3:
+
+Number of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age.
+Here, the age of acquisition (AoA) of a word is computed as the age where children younger than AoA have pronounced 3% of all its occurrences in the whole CHILDES dataset, of a specific language.
+</br></br>
+
+
+#### ooc_vocab_words_3:
+
+List of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age and a 3% threshold. (see out_of_child_vocab_nbr_3)
+</br></br>
+
+
+#### out_of_child_vocab_nbr_10:
+
+Number of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age.
+Here, the age of acquisition (AoA) of a word is computed as the age where children younger than AoA have pronounced 10% of all its occurrences in the whole CHILDES dataset, of a specific language.
+</br></br>
+
+
+#### ooc_vocab_words_10:
+
+List of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age and a 10% threshold. (see out_of_child_vocab_nbr_10)
+</br></br>
+
+
+#### out_of_child_vocab_nbr_20:
+
+Number of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age.
+Here, the age of acquisition (AoA) of a word is computed as the age where children younger than AoA have pronounced 20% of all its occurrences in the whole CHILDES dataset, of a specific language.
+</br></br>
+
+
+#### ooc_vocab_words_20:
+
+List of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age and a 20% threshold. (see out_of_child_vocab_nbr_20)
+</br></br>
+
+
+#### out_of_child_vocab_nbr_50:
+
+Number of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age.
+Here, the age of acquisition (AoA) of a word is computed as the age where children younger than AoA have pronounced 50% of all its occurrences in the whole CHILDES dataset, of a specific language.
+</br></br>
+
+
+#### ooc_vocab_words_50:
+
+List of words in the adult utterance (specifically adult_tokens) that are out of the child vocabulary considering his age and a 50% threshold. (see out_of_child_vocab_nbr_50)
+</br></br>
