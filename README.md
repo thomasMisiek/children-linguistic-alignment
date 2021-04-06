@@ -26,7 +26,7 @@ For example: python run.py French_20_25 French 20 25 True
 </ul>
 
 You should run a test first to ensure everything run fine, it should take 5 minutes.
-Complete generation (10 month to 80) on a personal computer should take around two days for the English dataset (biggest CHILDES dataset), and around 6 hours for the other languages.
+Complete generation (10 month to 80) on my laptop take around two days for the English dataset (biggest CHILDES dataset), and around 6 hours for the other languages.
 
 ## Contributing
 Please contact thomas.misiek@gmail.com to report any problem or if you want to add something to the code
