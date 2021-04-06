@@ -263,7 +263,7 @@ def get_condition(row1, row2, precondition):
             return "chi->par"
         return "par->chi"
     else:
-        return condition
+        return precondition
 
 
 def parent_sex(row):
