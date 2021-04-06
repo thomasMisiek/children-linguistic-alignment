@@ -24,7 +24,6 @@ For example: python run.py French_20_25 French 20 25 True
 <li>with 25 being the maximal age to be considered. Mandatory</li>
 <li>and True stating if the program is in test mode or not. Optional, default value: False</li>
 </ul>
-<br />
 
 ## Contributing
 Please contact thomas.misiek@gmail.com to report any bug or if you want to add something to the code
